@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400; }
+  body a {
+    text-decoration: none; }
+
+img {
+  width: 100%;
+  display: block; }
+
+.button {
+  display: block;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; }
+  .button:hover {
+    background: #fff;
+    color: #D32757; }
+  .button:active {
+    color: #F2CDD4; }
+
+header {
+  position: relative; }
+
+.navbar {
+  position: absolute;
+  padding: 20px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 8, 0.3); }
+  .navbar svg {
+    position: relative;
+    top: -12px;
+    width: 200px; }
+  .navbar a {
+    color: #fff;
+    font-size: 20px; }
+
+.svg-t, .svg-m {
+  display: none; }
+
+.iphone {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  left: 20%;
+  z-index: 1; }
+
+.in-iphone {
+  position: absolute;
+  width: 18%;
+  left: 63%;
+  bottom: 19%; }
+
+.head-text {
+  position: absolute;
+  width: 35%;
+  top: 25%;
+  left: 6%;
+  color: #fff;
+  text-align: center; }
+  .head-text h1 {
+    font-size: 60px; }
+  .head-text p {
+    font-size: 20px; }
+  .head-text .button {
+    margin: 20%; }
+
+@media (max-width: 1200px) {
+  .apb {
+    color: #000; } }
