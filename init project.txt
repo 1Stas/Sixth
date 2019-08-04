@@ -22,7 +22,7 @@ npm install rimraf -g    установка пакета для удаления
 
 rimraf node_modules      удаление
 
-npm install -S package1 package2 package3 
+npm install -D gulp gulp-sass browser-sync gulp-autoprefixer gulp-plumber gulp-pug gulp-sourcemaps 
 
                          установка нескольких пакетов сразу
 
