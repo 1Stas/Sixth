@@ -3,7 +3,7 @@
 
 body {
   font-family: "Open Sans";
-  font-weight: 400; }
+  font-weight: 200; }
   body a {
     text-decoration: none; }
 
@@ -32,7 +32,7 @@ header {
 
 .navbar {
   position: absolute;
-  padding: 20px 100px;
+  padding: 20px 5em;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -45,6 +45,107 @@ header {
   .navbar a {
     color: #fff;
     font-size: 20px; }
+
+.navbar .popup_button {
+  position: absolute;
+  right: 25px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px; }
+  .navbar .popup_button:hover {
+    opacity: 1; }
+  .navbar .popup_button span {
+    display: block;
+    background: #fff;
+    border-radius: 2px; }
+  .navbar .popup_button #hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+    .navbar .popup_button #hamburger span {
+      width: 50px;
+      height: 4px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      margin: 10px 0;
+      transition: .5s ease-in-out; }
+    .navbar .popup_button #hamburger:nth-child(1) {
+      transition-delay: .5s; }
+    .navbar .popup_button #hamburger:nth-child(2) {
+      transition-delay: .625s; }
+    .navbar .popup_button #hamburger:nth-child(3) {
+      transition-delay: .75s; }
+  .navbar .popup_button #cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg); }
+    .navbar .popup_button #cross span {
+      transition: .5s ease-in-out; }
+      .navbar .popup_button #cross span:nth-child(1) {
+        height: 0%;
+        width: 4px;
+        position: absolute;
+        top: 10%;
+        left: 24px;
+        transition-delay: 0s; }
+      .navbar .popup_button #cross span:nth-child(2) {
+        width: 0%;
+        height: 4px;
+        position: absolute;
+        left: 10%;
+        top: 24px;
+        transition-delay: .25s; }
+
+.popup_button.open #hamburger span {
+  width: 0%; }
+  .popup_button.open #hamburger span:nth-child(1) {
+    transition-delay: 0s; }
+  .popup_button.open #hamburger span:nth-child(2) {
+    transition-delay: .125s; }
+  .popup_button.open #hamburger span:nth-child(3) {
+    transition-delay: .25s; }
+
+.popup_button.open #cross span:nth-child(1) {
+  height: 80%;
+  transition-delay: .625s; }
+
+.popup_button.open #cross span:nth-child(2) {
+  width: 80%;
+  transition-delay: .375s; }
+
+.popup-checkbox, .popup {
+  display: none; }
+
+.popup {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  opacity: 0; }
+  .popup .popup-content {
+    width: 100%;
+    position: absolute;
+    background: #1E2631;
+    text-align: center; }
+    .popup .popup-content a {
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      border-bottom: 2px solid #000;
+      box-shadow: 1px -0.2px #ddd; }
+      .popup .popup-content a:nth-child(1) {
+        box-shadow: 0 -0.2px #ddd, 0 -2px #000; }
+      .popup .popup-content a:nth-child(4) {
+        border-bottom: 1px solid #000; }
+
+.popup-checkbox:checked + .popup {
+  opacity: 1;
+  display: block; }
 
 .svg-t, .svg-m {
   display: none; }
@@ -68,7 +169,8 @@ header {
   top: 25%;
   left: 6%;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  z-index: 2; }
   .head-text h1 {
     font-size: 60px;
     font-weight: 200; }
@@ -78,8 +180,8 @@ header {
   .head-text .button {
     margin: 20%; }
   .head-text svg {
-    width: 100px;
-    height: 70px; }
+    width: 80px;
+    height: 50px; }
 
 .offer {
   position: relative;
@@ -91,16 +193,308 @@ header {
     font-weight: 200;
     margin: 0; }
 
+.offer-wrapper {
+  padding: 0 10%; }
+
+.offer-tablet {
+  display: none; }
+
 .diagonal {
-  background: #f2f;
+  background: #f2f2f2;
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 50px;
+  top: 24%;
   left: 0;
   transform: skewY(-3deg);
   z-index: -1; }
 
-@media (max-width: 1200px) {
-  .apb {
-    color: #000; } }
+.offer-phone {
+  display: flex;
+  justify-content: space-between; }
+  .offer-phone .offer-item {
+    position: relative;
+    width: 30%; }
+    .offer-phone .offer-item .phone {
+      position: absolute;
+      width: 70%;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      .offer-phone .offer-item .phone .screen {
+        position: absolute;
+        width: 87%;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, 0); }
+      .offer-phone .offer-item .phone span {
+        position: absolute;
+        top: 81%;
+        left: -10%;
+        display: block;
+        width: 120%;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 -10px 10px black; }
+    .offer-phone .offer-item .offer-text {
+      position: relative;
+      background: #f2f2f2;
+      margin-top: 114%;
+      padding: 0 1em;
+      text-align: center;
+      z-index: 1; }
+      .offer-phone .offer-item .offer-text h2 {
+        font-weight: 800;
+        font-size: 30px;
+        padding: 1em 0; }
+      .offer-phone .offer-item .offer-text p {
+        font-size: 20px;
+        margin: 0; }
+
+.offer-clock {
+  margin: 100px 0;
+  display: flex; }
+
+.clock {
+  position: relative;
+  width: 400px;
+  height: 400px; }
+  .clock svg {
+    position: absolute;
+    fill: #ddd;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .clock .diagram {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -44%); }
+  .clock span {
+    position: absolute;
+    font-size: 10em;
+    font-weight: 800;
+    text-align: center;
+    color: #D22855;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%); }
+
+.description {
+  width: 70%;
+  padding: 5em 0em 5em 8em; }
+  .description h3 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: left;
+    margin-bottom: 2em; }
+  .description p {
+    font-size: 20px; }
+  .description a {
+    display: block;
+    margin-top: 2em;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #D22855; }
+
+.comment {
+  width: 100%;
+  padding: 2em 10%; }
+  .comment svg {
+    display: block;
+    margin: 0 auto;
+    fill: #f2f2f2;
+    width: 100px; }
+
+.carousel-item {
+  text-align: center; }
+
+.comment .owl-carousel .owl-nav.disabled {
+  display: block; }
+
+.owl-carousel .owl-dots {
+  display: none; }
+
+@media (max-width: 1300px) {
+  .head-text {
+    width: 45%;
+    left: 2em;
+    top: 20%; }
+    .head-text .button {
+      margin: 10%; } }
+
+@media (max-width: 1000px) {
+  .head-text h1 {
+    font-size: 50px; }
+  .offer h2 {
+    padding: 2em 0; } }
+
+@media (max-width: 900px) {
+  .clock span {
+    font-size: 8em; }
+  .clock .diagram {
+    transform: translate(-50%, -45%); }
+  .description {
+    padding: 3em 0 5em 2em; }
+  .offer-clock {
+    margin: 40px 0; } }
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 1em; }
+    .navbar a {
+      font-size: 18px; }
+    .navbar svg {
+      width: 150px;
+      height: 70px;
+      top: -8px; }
+  .svg-d, .svg-m {
+    display: none; }
+  .svg-t {
+    display: block; }
+  .head-text {
+    width: 50%;
+    left: 1em; }
+    .head-text h1 {
+      font-size: 36px; }
+    .head-text p {
+      padding: 0 1em;
+      font-size: 18px; }
+  .iphone {
+    width: 70%;
+    left: 30%; }
+  .in-iphone {
+    bottom: 18%;
+    left: 68%;
+    width: 16%; }
+  .button {
+    font-size: 18px; }
+  .offer-wrapper {
+    padding: 0 5%; }
+  .offer h2 {
+    padding: 1em 0;
+    font-size: 50px; }
+  .offer-phone {
+    flex-direction: column;
+    padding: 5em 0 2em 0;
+    overflow: hidden; }
+    .offer-phone .offer-item {
+      width: 50%;
+      margin-left: auto; }
+      .offer-phone .offer-item .phone {
+        display: none; }
+      .offer-phone .offer-item .offer-text {
+        margin-top: 0;
+        padding: 0;
+        text-align: left; }
+        .offer-phone .offer-item .offer-text h2 {
+          text-align: left;
+          font-size: 26px; }
+  .offer-tablet {
+    position: relative;
+    display: block;
+    width: 45%; }
+    .offer-tablet .phone {
+      position: absolute;
+      width: 100%;
+      top: -50px; }
+      .offer-tablet .phone .screen {
+        position: absolute;
+        width: 89%;
+        top: 11%;
+        left: 50%;
+        transform: translate(-50%, 0); }
+  .diagonal {
+    top: 23%; }
+  .description h3 {
+    font-size: 26px; } }
+
+@media (max-width: 700px) {
+  .navbar a {
+    font-size: 16px; }
+  .head-text {
+    width: 70%; }
+    .head-text h1 {
+      font-size: 30px; }
+    .head-text p {
+      font-size: 16px; }
+    .head-text .button {
+      font-size: 16px;
+      margin: 8%; }
+  .iphone {
+    left: 30%; }
+  .in-iphone {
+    left: 68%; }
+  .offer-tablet .phone {
+    top: auto; } }
+
+@media (max-width: 600px) {
+  .svg-t, .menu-desktop {
+    display: none; }
+  .svg-m {
+    display: block; }
+  .navbar {
+    background: #1E2631;
+    padding: 10px 2em; }
+    .navbar svg {
+      width: 100px;
+      top: 0;
+      height: 50px; }
+  .iphone {
+    width: 146%;
+    left: -46%; }
+  .in-iphone {
+    left: 33%;
+    bottom: 17%;
+    width: 33%; }
+  .head-text {
+    background: #1E2631;
+    width: 100%;
+    left: 0;
+    top: auto;
+    padding: 20px; }
+    .head-text h1 {
+      display: none; }
+    .head-text p {
+      margin: 20px 0;
+      color: #ddd; }
+    .head-text .button {
+      margin: 5%; }
+  .offer {
+    margin-top: 16em; }
+  .offer-wrapper h2 {
+    font-size: 40px; }
+    .offer-wrapper h2 span {
+      display: block;
+      padding: 1em 0; }
+  .offer-phone {
+    padding: 0 0 25em 0; }
+    .offer-phone .offer-tablet {
+      order: 5;
+      width: 44%;
+      margin: 0 auto;
+      padding: 2em 0 0 0; }
+    .offer-phone .offer-item {
+      margin-left: 0;
+      width: 100%; }
+      .offer-phone .offer-item .offer-text {
+        text-align: center; }
+        .offer-phone .offer-item .offer-text h2 {
+          text-align: center; }
+  .diagonal {
+    top: 16%; }
+  .offer-clock {
+    display: none; } }
+
+@media (max-width: 500px) {
+  .offer-phone .offer-tablet {
+    width: 52%; } }
+
+@media (max-width: 400px) {
+  .offer-phone {
+    padding: 0 0 16em 0; } }
+
+@media (min-width: 600px) {
+  .navbar .popup_button {
+    display: none; } }
