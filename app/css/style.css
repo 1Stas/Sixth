@@ -299,7 +299,8 @@ header {
     color: #D22855; }
 
 .comment {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   padding: 2em 10%; }
   .comment svg {
     display: block;
@@ -315,6 +316,21 @@ header {
 
 .owl-carousel .owl-dots {
   display: none; }
+
+.owl-prev span {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  font-size: 5em;
+  color: #ccc; }
+
+.owl-next span {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 5em;
+  font-weight: 100;
+  color: #ccc; }
 
 @media (max-width: 1300px) {
   .head-text {
@@ -408,7 +424,23 @@ header {
   .diagonal {
     top: 23%; }
   .description h3 {
-    font-size: 26px; } }
+    font-size: 26px; }
+  .comment svg {
+    display: none; }
+  .comment .owl-carousel .owl-nav.disabled {
+    display: none; }
+  .owl-theme .owl-dots {
+    display: block; }
+    .owl-theme .owl-dots .owl-dot span {
+      width: 15px;
+      height: 15px; }
+      .owl-theme .owl-dots .owl-dot span:hover {
+        border: 3px solid black;
+        border-radius: 50%; }
+    .owl-theme .owl-dots .owl-dot:focus {
+      outline: none; }
+  .comment {
+    padding: 2em 5%; } }
 
 @media (max-width: 700px) {
   .navbar a {
