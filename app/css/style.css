@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -5,7 +6,8 @@ body {
   font-family: "Open Sans";
   font-weight: 200; }
   body a {
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
 
 img {
   width: 100%;
@@ -310,6 +312,10 @@ header {
 
 .carousel-item {
   text-align: center; }
+  .carousel-item h3 {
+    font-size: 24px; }
+  .carousel-item p {
+    font-size: 20px; }
 
 .comment .owl-carousel .owl-nav.disabled {
   display: block; }
@@ -332,6 +338,428 @@ header {
   font-weight: 100;
   color: #ccc; }
 
+.price {
+  position: relative;
+  padding: 10em 0 5em 0;
+  overflow: hidden; }
+  .price .price-table {
+    padding: 0 10%; }
+    .price .price-table table {
+      width: 100%; }
+      .price .price-table table th {
+        background: #283545;
+        padding: 0 1em; }
+        .price .price-table table th h3 {
+          font-size: 24px;
+          color: #fff;
+          font-weight: 400; }
+        .price .price-table table th p {
+          color: #dddddd;
+          font-weight: 200; }
+        .price .price-table table th:nth-child(1) {
+          background: none; }
+        .price .price-table table th:nth-child(3) {
+          position: relative;
+          overflow: hidden;
+          z-index: -2; }
+          .price .price-table table th:nth-child(3):before {
+            position: absolute;
+            content: "Х И Т";
+            font-size: 12px;
+            color: #fff;
+            top: 14px;
+            left: 6px;
+            transform: rotate(-45deg); }
+          .price .price-table table th:nth-child(3):after {
+            position: absolute;
+            content: "";
+            background: #D22855;
+            width: 170px;
+            height: 25px;
+            top: -7px;
+            left: -50px;
+            transform: rotate(-45deg);
+            z-index: -1; }
+      .price .price-table table p {
+        font-size: 20px; }
+      .price .price-table table svg {
+        width: 40px;
+        height: 40px; }
+      .price .price-table table td {
+        padding: 10px;
+        text-align: center;
+        background: white; }
+      .price .price-table table td p {
+        text-align: left; }
+
+.price-item {
+  padding: 0 5%; }
+  .price-item table {
+    width: 100%; }
+    .price-item table th {
+      background: #283545;
+      padding: 0 1em; }
+      .price-item table th h3 {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 400; }
+      .price-item table th p {
+        color: #dddddd;
+        font-weight: 200;
+        text-align: center; }
+    .price-item table p {
+      position: relative;
+      font-size: 20px;
+      text-align: left; }
+    .price-item table svg {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      width: 40px;
+      height: 40px; }
+    .price-item table td {
+      padding: 10px;
+      text-align: center;
+      background: white; }
+
+.diagonal-price {
+  background: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  transform: skewY(-3deg);
+  z-index: -3; }
+
+.contacts {
+  padding: 2em 10%; }
+  .contacts h2 {
+    text-align: center;
+    font-size: 4em;
+    font-weight: 200;
+    margin: 10px; }
+
+.contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 2em; }
+
+.con-item {
+  text-align: center;
+  padding: 0 1em;
+  margin: 0 auto; }
+  .con-item h3 {
+    font-size: 2em; }
+  .con-item p {
+    font-size: 1.5em;
+    color: #D22855; }
+
+.map {
+  width: 100%;
+  height: 800px;
+  background: black; }
+
+.triangle {
+  position: relative; }
+  .triangle svg {
+    position: absolute;
+    top: 0;
+    fill: #fff;
+    width: 100%;
+    height: 126px;
+    z-index: 1; }
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3em 10%; }
+
+.footer-1 svg {
+  width: 200px; }
+
+.footer-2 {
+  display: flex;
+  align-items: center; }
+  .footer-2 a {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px; }
+    .footer-2 a:hover {
+      box-shadow: 0 0 5px #D22855; }
+    .footer-2 a svg {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 16px;
+      left: 17px; }
+    .footer-2 a:nth-child(3) svg {
+      left: 20px; }
+
+.footer-3 {
+  display: flex;
+  align-items: center;
+  padding-right: 3em; }
+  .footer-3 a {
+    position: relative;
+    font-size: 20px;
+    color: #000; }
+    .footer-3 a svg {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      right: -45px; }
+
+header {
+  position: relative; }
+
+.photo-title {
+  position: absolute;
+  width: 13em;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 60px;
+  font-weight: 200;
+  color: #fff; }
+
+.head-item {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #ffffff;
+  bottom: 0; }
+  .head-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px; }
+
+.panorama {
+  position: relative; }
+  .panorama a {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    top: 50px;
+    right: 50px;
+    text-align: center;
+    padding: 10px;
+    background: #D22855; }
+
+.panorama-text {
+  position: relative;
+  padding: 2em 4em;
+  margin: 0 10%;
+  background: #f2f2f2; }
+  .panorama-text h3 {
+    position: relative;
+    font-size: 24px; }
+    .panorama-text h3 span {
+      font-size: 20px;
+      color: #9b9b9b;
+      font-weight: 200; }
+  .panorama-text .like {
+    position: absolute;
+    color: #D22855;
+    top: 60px;
+    right: 100px;
+    font-size: 20px; }
+    .panorama-text .like svg {
+      position: absolute;
+      top: -1px;
+      right: -30px;
+      margin-left: 10px;
+      width: 20px; }
+  .panorama-text p {
+    font-size: 20px; }
+
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2em 10%; }
+
+.photo-2 {
+  padding: 4em 5%;
+  width: 100%; }
+  .photo-2 p {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin: .5em 0; }
+
+.photo-item {
+  width: 30%;
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2; }
+  .photo-item .like {
+    display: block;
+    font-size: 20px;
+    color: #D22855;
+    margin-top: auto;
+    padding: 2em; }
+    .photo-item .like svg {
+      width: 20px;
+      float: right; }
+
+.photo-text {
+  padding: 2em 2em 0 2em; }
+  .photo-text h3 {
+    font-size: 24px;
+    margin-top: 0; }
+    .photo-text h3 span {
+      font-size: 20px;
+      color: #9b9b9b;
+      font-weight: 200; }
+  .photo-text p {
+    font-size: 20px; }
+
+.photoshop {
+  padding: 2em 10%; }
+
+.photoshop-wrapper {
+  padding: 4em 7%;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: space-between; }
+  .photoshop-wrapper picture {
+    width: 40%; }
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
+  .settings svg {
+    fill: #D22855;
+    width: 50px;
+    height: 65px;
+    margin: 10px; }
+
+.button-block {
+  margin-top: auto; }
+  .button-block .button {
+    display: inline-block;
+    padding: 10px 0;
+    color: #c7c7c7;
+    border: 2px solid #c7c7c7;
+    width: 40%; }
+    .button-block .button:hover {
+      border: 2px solid #D22855;
+      color: #D22855; }
+  .button-block .button-two {
+    float: right; }
+
+.crop, .fill, .contrast {
+  position: relative;
+  border-bottom: 1px solid #ddd; }
+
+.contrast svg {
+  width: 45px; }
+
+input[type=range] {
+  position: absolute;
+  -webkit-appearance: none;
+  top: 50%;
+  right: 2%;
+  width: 80%;
+  transform: translate(0, -50%); }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000;
+  border-radius: 25px;
+  border: 0px solid #000101; }
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 2px solid #D22855;
+  height: 20px;
+  width: 40px;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px; }
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ac51b5; }
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #ac51b5;
+  border-radius: 25px;
+  border: 0px solid #000101; }
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 39px;
+  border-radius: 7px;
+  background: #65001c;
+  cursor: pointer; }
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent; }
+
+input[type=range]::-ms-fill-lower {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range]::-ms-fill-upper {
+  background: #ac51b5;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 39px;
+  border-radius: 7px;
+  background: #65001c;
+  cursor: pointer; }
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #ac51b5; }
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ac51b5; }
+
 @media (max-width: 1300px) {
   .head-text {
     width: 45%;
@@ -340,11 +768,41 @@ header {
     .head-text .button {
       margin: 10%; } }
 
+@media (max-width: 1200px) {
+  .triangle svg {
+    height: 118px; } }
+
+@media (max-width: 1100px) {
+  .triangle svg {
+    height: 105px; } }
+
 @media (max-width: 1000px) {
   .head-text h1 {
     font-size: 50px; }
   .offer h2 {
-    padding: 2em 0; } }
+    padding: 2em 0; }
+  .triangle svg {
+    height: 95px; }
+  .photo-item {
+    width: 48%; }
+  .photo-title {
+    font-size: 50px;
+    top: 33%;
+    width: 80%; }
+  .head-item {
+    height: 38%; }
+    .head-item p {
+      top: 36%;
+      font-size: 20px;
+      width: 90%; }
+  .photoshop {
+    padding: 0; }
+  .button-block .button {
+    display: block;
+    width: 100%;
+    margin-top: 20px; }
+  .button-block .button-two {
+    float: none; } }
 
 @media (max-width: 900px) {
   .clock span {
@@ -354,7 +812,11 @@ header {
   .description {
     padding: 3em 0 5em 2em; }
   .offer-clock {
-    margin: 40px 0; } }
+    margin: 40px 0; }
+  .triangle svg {
+    height: 82px; }
+  .photoshop-wrapper {
+    padding: 4em 5%; } }
 
 @media (max-width: 800px) {
   .navbar {
@@ -440,7 +902,50 @@ header {
     .owl-theme .owl-dots .owl-dot:focus {
       outline: none; }
   .comment {
-    padding: 2em 5%; } }
+    padding: 2em 5%; }
+  .price .price-table {
+    padding: 0 5%; }
+  .contacts {
+    padding: 2em  5%; }
+    .contacts h2 {
+      font-size: 3em; }
+  .con-item h3 {
+    font-size: 1.5em; }
+  .con-item p {
+    font-size: 1em; }
+  .triangle svg {
+    height: 73px; }
+  .footer-wrapper {
+    padding: 3em 5%; }
+  .photo {
+    padding: 2em 5%; }
+  .panorama-text h3 {
+    font-size: 20px; }
+    .panorama-text h3 span {
+      font-size: 18px; }
+  .panorama-text p {
+    font-size: 18px; }
+  .photo {
+    padding: 2em 5%; }
+  .photo-2 p {
+    font-size: 20px; }
+  .photo-item .like {
+    font-size: 18px; }
+  .photo-text h3 {
+    font-size: 20px; }
+    .photo-text h3 span {
+      font-size: 18px; }
+  .photo-text p {
+    font-size: 18px; }
+  .panorama-text {
+    margin: 0 5%;
+    padding: 1em 2em; }
+    .panorama-text .like {
+      font-size: 18px;
+      top: 38px;
+      right: 62px; }
+  .settings svg {
+    height: 30px; } }
 
 @media (max-width: 700px) {
   .navbar a {
@@ -459,7 +964,20 @@ header {
   .in-iphone {
     left: 68%; }
   .offer-tablet .phone {
-    top: auto; } }
+    top: auto; }
+  .price-table {
+    display: none; }
+  .triangle svg {
+    height: 63px; }
+  .footer-1, .footer-2, .footer-3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1em 0; } }
+
+@media (min-width: 700px) {
+  .price-carousel .price-item {
+    display: none; } }
 
 @media (max-width: 600px) {
   .svg-t, .menu-desktop {
@@ -517,15 +1035,80 @@ header {
   .diagonal {
     top: 16%; }
   .offer-clock {
-    display: none; } }
+    display: none; }
+  .contacts h2 {
+    font-size: 2em; }
+  .triangle svg {
+    height: 52px; }
+  .photo-title {
+    font-size: 34px; }
+  .head-item p {
+    font-size: 18px; }
+  .panorama a {
+    top: 0;
+    right: 0; }
+  .panorama-text .like {
+    bottom: 20px;
+    top: auto;
+    left: 70px;
+    right: auto; }
+    .panorama-text .like svg {
+      right: auto;
+      left: -45px; }
+  .panorama-text p {
+    margin-bottom: 80px; }
+  .photo-item {
+    width: 100%; }
+    .photo-item .like {
+      position: relative;
+      left: 65px;
+      padding: 2em 0;
+      width: 200px; }
+      .photo-item .like svg {
+        position: absolute;
+        top: 33px;
+        left: -30px; }
+  .footer-3 a {
+    left: -15px; }
+  .photoshop-wrapper {
+    flex-wrap: wrap;
+    padding: 2em 5%; }
+    .photoshop-wrapper picture {
+      width: 100%; }
+  .settings {
+    width: 100%; }
+    .settings svg {
+      margin-bottom: 40px;
+      margin-top: 20px; }
+  .crop:before, .fill:before, .contrast:before {
+    position: absolute;
+    content: "Яркость";
+    color: #D22855;
+    font-weight: 600;
+    top: 25%;
+    left: 60px; }
+  .crop:before {
+    content: "Блюр"; }
+  .contrast:before {
+    content: "Контраст"; }
+  input[type=range] {
+    width: 96%;
+    top: auto;
+    bottom: 15%; } }
 
 @media (max-width: 500px) {
   .offer-phone .offer-tablet {
-    width: 52%; } }
+    width: 52%; }
+  .triangle svg {
+    height: 42px; }
+  .photo-2 {
+    padding: 2em 5%; } }
 
 @media (max-width: 400px) {
   .offer-phone {
-    padding: 0 0 16em 0; } }
+    padding: 0 0 16em 0; }
+  .triangle svg {
+    height: 33px; } }
 
 @media (min-width: 600px) {
   .navbar .popup_button {
