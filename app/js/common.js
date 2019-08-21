@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	$('.popup_button').click(function(){
 		$(this).toggleClass('open');
@@ -25,23 +24,6 @@ $(document).ready(function(){
 	//	responsive: {0:{items:1}, 600:{items:2, center:false}, 900:{items:3}},
 	});
 });
-
-// Range slider
-
-	var image = document.querySelector('.change-photo');
-	var contrast = document.querySelector('.contrast-slide');
-	var brightness = document.querySelector('.brightness');
-	var blur = document.querySelector('.blur');
-	
-	contrast.addEventListener('change', function(e){
-		image.style.filter = "contrast(" + e.target.value + "%" +")";
-	});
-	brightness.addEventListener('change', function(e){
-		image.style.filter = "brightness(" + e.target.value + "%" +")";
-	});
-	blur.addEventListener('change', function(e){
-		image.style.filter = "blur(" + e.target.value + "px" +")";
-	});
 
 // Своя иконка на картах. После блока код может не правильно работать
 
